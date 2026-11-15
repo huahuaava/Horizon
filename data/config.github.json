@@ -30,6 +30,6 @@
   },
   "collection": {"time_window_hours": 24},
   "digest": {"max_items": null, "profile_order": ["tech-news", "tech-blog", "finance-news"], "category_groups": {}, "default_group": "other", "default_group_limit": null},
-  "webhook": {"enabled": false, "url_env": "HORIZON_WEBHOOK_URL", "delivery": "summary", "overview_position": "first", "platform": "generic", "layout": "markdown", "fallback_layout": "markdown", "languages": null, "request_body": {"text": "Horizon #{date} Daily\n#{summary}"}, "headers": {}},
+  "webhook": {"enabled": false, "url_env": "HORIZON_WEBHOOK_URL", "delivery": "summary", "overview_position": "first", "platform": "generic", "layout": "markdown", "fallback_layout": "markdown", "languages": null, "request_body": {"text": "Horizon #{date} Daily\n#{summary}"}, "headers": ""},
   "wechat": {"enabled": false, "languages": null, "chunk_size": 4000}
 }
