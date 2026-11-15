@@ -2,6 +2,7 @@
   "ai": {
     "provider": "gemini",
     "model": "gemini-2.0-flash",
+    "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
     "api_key_env": "GOOGLE_API_KEY",
     "temperature": 0.3,
     "max_tokens": 4096,
