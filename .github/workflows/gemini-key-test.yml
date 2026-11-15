@@ -1,0 +1,14 @@
+name: Gemini Key Test
+on:
+  workflow_dispatch:
+jobs:
+  test-key:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Gemini generateContent
+        run: |
+          code=$(curl -s -o /tmp/resp.json -w "%{http_code}" "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent" -H "x-goog-api-key: ${{ secrets.GOOGLE_API_KEY }}" -H "Content-Type: application/json" -d '{"contents":[{"parts":[{"text":"Reply with OK"}]}]}')
+          echo "HTTP_STATUS=$code"
+          echo "--- response (first 1000 chars) ---"
+          head -c 1000 /tmp/resp.json
+          echo
